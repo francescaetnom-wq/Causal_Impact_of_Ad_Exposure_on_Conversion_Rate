@@ -51,7 +51,7 @@ IPW is a causal inference technique that re-weights observations to create a sta
 
 Before drawing any causal conclusions, we verify that both groups share a comparable range of propensity scores. If the distributions had no overlap, the comparison would be invalid.
 
-![Common Support Plot](common_support_plot.png)
+![Common Support Plot](common_sup_plot.png)
 
 > **Reading this plot:** The overlap between the two curves confirms that both groups contain users with similar characteristics. The IPW comparison is statistically valid.
 
@@ -61,7 +61,7 @@ Before drawing any causal conclusions, we verify that both groups share a compar
 
 The Love Plot shows the Standardized Mean Difference (SMD) for each covariate before and after IPW weighting. An SMD below **0.1** is the conventional threshold for adequate balance.
 
-![Love Plot](love_plot.png)
+![Love Plot](loveplot.png)
 
 > **Reading this plot:** All three covariates (age, past purchases, device) fall well below the 0.1 threshold **after IPW weighting** (blue dots), confirming that selection bias has been successfully removed. Before weighting (red dots), the groups were substantially imbalanced — especially on `device_mobile` and `age`.
 
